@@ -1,0 +1,35 @@
+{
+  "name": "labuddy",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:user": "turbo dev --filter=user",
+    "dev:dealer": "turbo dev --filter=dealer",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "lint:fix": "eslint \"apps/**/*.{ts,tsx,js,jsx}\" \"packages/**/*.{ts,tsx,js,jsx}\" --fix",
+    "storybook": "cd packages/ui && pnpm storybook",
+    "build-storybook": "cd packages/ui && pnpm build-storybook"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.5.3",
+    "typescript": "5.8.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0",
+      "@types/react": "19.1.0",
+      "@types/react-dom": "19.1.1"
+    }
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

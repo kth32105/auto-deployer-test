@@ -1,0 +1,7 @@
+# 워크 스페이스 설정 파일
+# 모노레포 내에서 관리할 패키지들의 경로 지정
+
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "packages/config/*"

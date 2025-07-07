@@ -1,0 +1,7 @@
+/* 공통 스타일 import */
+@import "@repo/ui/styles/globals.css";
+
+/* 앱별 커스텀 스타일 */
+@layer utilities {
+  /* dealer 앱 전용 스타일 */
+}

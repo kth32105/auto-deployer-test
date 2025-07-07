@@ -1,0 +1,205 @@
+/* 공통 테마 파일 */
+
+@theme {
+  /* 브랜드 색상 */
+  --color-yellow-light: #fffef1;
+  --color-yellow-lightHover: #fffdeb;
+  --color-yellow-lightActive: #fffcd5;
+  --color-yellow-normal: #fff477;
+  --color-yellow-normalHover: #e6dc6b;
+  --color-yellow-normalActive: #ccc35f;
+  --color-yellow-dark: #bfb759;
+  --color-yellow-darkHover: #999247;
+  --color-yellow-darkActive: #736e36;
+  --color-yellow-darker: #59552a;
+
+  --color-grey-light: #fffefe;
+  --color-grey-lightHover: #fefefe;
+  --color-grey-lightActive: #fdfdfd;
+  --color-grey-normal: #fafaf8;
+  --color-grey-normalHover: #f6f6f2;
+  --color-grey-normalActive: #efefea;
+  --color-grey-normalActive2: #dfdfdf;
+  --color-grey-dark: #bcbaba;
+  --color-grey-darkHover: #969595;
+  --color-grey-darkActive: #585757;
+  --color-grey-darker: #404040;
+
+  --color-red-light: #ffeeee;
+  --color-red-lightHover: #ffe5e6;
+  --color-red-lightActive: #ffc9cb;
+  --color-red-normal: #ff5056;
+  --color-red-normalHover: #e6484d;
+  --color-red-normalActive: #cc4045;
+  --color-red-dark: #bf3c41;
+  --color-red-darkHover: #993034;
+  --color-red-darkActive: #732427;
+  --color-red-darker: #591c1e;
+
+  /* shadcn/ui 호환 색상 */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172a;
+  --color-primary: #0f172a;
+  --color-primary-foreground: #f8fafc;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-accent: #f1f5f9;
+  --color-accent-foreground: #0f172a;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #0f172a;
+
+  /* 폰트 패밀리 */
+  --font-family-sans: Pretendard, ui-sans-serif, system-ui, sans-serif;
+
+  /* 반지름 */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+/* 커스텀 유틸리티 */
+@utility text-h1 {
+  font-size: 48px;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+@utility text-h2 {
+  font-size: 32px;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+@utility text-h3 {
+  font-size: 28px;
+  line-height: 146%;
+  font-weight: 700;
+}
+
+@utility text-h4 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+@utility text-h5 {
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+@utility text-t1 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+@utility text-t2 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+@utility text-t3 {
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+@utility text-t4 {
+  font-size: 15px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+@utility text-b1 {
+  font-size: 15px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+@utility text-b2 {
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+@utility text-b3 {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+@utility text-b4 {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+/* 커스텀 변형 */
+@custom-variant mobile {
+  @media (max-width: 767px) {
+    @slot;
+  }
+}
+
+@custom-variant tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @slot;
+  }
+}
+
+@custom-variant desktop {
+  @media (min-width: 1024px) {
+    @slot;
+  }
+}
+
+/* 동적 모바일 크기를 위한 유틸리티 */
+@utility text-responsive {
+  font-size: var(--desktop-size, 32px);
+  font-weight: 700;
+  @media (max-width: 767px) {
+    font-size: var(--mobile-size, 20px);
+  }
+}
+
+@utility text-responsive-s {
+  font-size: var(--desktop-size, 24px);
+  font-weight: 600;
+  @media (max-width: 767px) {
+    font-size: var(--mobile-size, 16px);
+  }
+}
+
+@utility text-responsive-m {
+  font-size: var(--desktop-size, 20px);
+  font-weight: 500;
+  @media (max-width: 767px) {
+    font-size: var(--mobile-size, 16px);
+  }
+}
+
+@utility text-responsive-r {
+  font-size: var(--desktop-size, 18px);
+  font-weight: 400;
+  @media (max-width: 767px) {
+    font-size: var(--mobile-size, 14px);
+  }
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}

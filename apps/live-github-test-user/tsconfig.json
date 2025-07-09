@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "../../packages",
+    "paths": {
+      "@/*": ["project/*"],
+      "@components/*": ["project/live-commerce/components/*"],
+      "@pages/*": ["project/live-commerce/page/*"],
+      "@assets/*": ["project/live-commerce/assets/*"],
+      "@constant/*": ["project/live-commerce/constant/*"],
+      "~type/*": ["project/live-commerce/types/*"],
+      "@theme/*": ["project/live-commerce/theme/*"],
+      "@hooks/*": ["project/live-commerce/hooks/*"],
+      "@utils/*": ["project/live-commerce/utils/*"],
+      "@styles/*": ["project/live-commerce/styles/*"],
+      "@store/*": ["project/live-commerce/store/*"],
+      "@api/*": ["project/live-commerce/api/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.json",
+    "src/hooks/commerce-live-logics",
+    "../../packages/project/device-commerce/*"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
